@@ -1,6 +1,6 @@
 {
   "name": "jam-auth",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "Endpoint for generating access tokens for besu requests.",
   "main": "dist/index.js",
   "scripts": {
