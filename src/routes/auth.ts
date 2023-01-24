@@ -1,9 +1,8 @@
 import express from "express";
 import { signJwt } from "../utils/jwtUtil";
 import { SecretUtil } from "@crypto-jambot/secret-manager-utils";
-import { CREDENTIALS as keyFile } from "../constant/constants";
 export const authRoute = express.Router();
-const secretUtil = new SecretUtil({ keyFile });
+const secretUtil = new SecretUtil();
 
 authRoute.get("/", async (req, res) => {
     const key = req.headers["api-key"];
