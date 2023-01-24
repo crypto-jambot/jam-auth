@@ -1,10 +1,7 @@
 import jwt, { JwtPayload } from "jsonwebtoken";
-import { CREDENTIALS as keyFile } from "../constant/constants";
 import { SecretUtil } from "@crypto-jambot/secret-manager-utils";
 
-const besuPKClient = new SecretUtil({
-    keyFile,
-});
+const besuPKClient = new SecretUtil();
 
 export async function signJwt() {
     const privateKey = await besuPKClient.getSecretPayload(
